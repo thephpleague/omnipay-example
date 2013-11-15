@@ -1,0 +1,21 @@
+{
+    "homepage": "https://github.com/omnipay/example",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrian Macneil",
+            "email": "adrian@adrianmacneil.com"
+        },
+        {
+            "name": "Omnipay Community",
+            "homepage": "https://github.com/omnipay/example/graphs/contributors"
+        }
+    ],
+    "require": {
+        "omnipay/common": "2.*",
+        "silex/silex": "1.0.*@dev",
+        "twig/twig": "~1.12"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

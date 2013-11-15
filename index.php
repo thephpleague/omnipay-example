@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
 // create basic Silex application
 $app = new Silex\Application();
@@ -16,7 +16,7 @@ $app['debug'] = true;
 $app->get('/', function() use ($app) {
     $gateways = array_map(function($name) {
         return Omnipay\Common\GatewayFactory::create($name);
-    }, Omnipay\Common\GatewayFactory::find());
+    }, Omnipay\Common\GatewayFactory::all());
 
     return $app['twig']->render('index.twig', array(
         'gateways' => $gateways,

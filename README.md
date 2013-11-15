@@ -8,11 +8,12 @@ It demonstrates using Omnipay to process payments using all supported payment ga
 To run the example application, you must first install the development dependencies via composer.
 From the root `omnipay` directory, run:
 
-    $ php composer.phar update --dev
+    $ curl -sS https://getcomposer.org/installer | php
+    $ php composer.phar update
 
 You can the use the built in web server (PHP 5.4+) to start the application:
 
-    $ php -S localhost:8000 -t example/
+    $ php -S localhost:8000
 
 The application will now be available at [http://localhost:8000/](http://localhost:8000/)
 
