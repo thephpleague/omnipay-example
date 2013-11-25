@@ -12,10 +12,8 @@
         }
     ],
     "require": {
-        "omnipay/common": "2.*",
-        "silex/silex": "1.0.*@dev",
+        "omnipay/omnipay": "~2.0",
+        "silex/silex": "~1.1",
         "twig/twig": "~1.12"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
