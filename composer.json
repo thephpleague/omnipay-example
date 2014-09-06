@@ -1,5 +1,5 @@
 {
-    "homepage": "https://github.com/omnipay/example",
+    "homepage": "https://github.com/thephpleague/omnipay-example",
     "license": "MIT",
     "authors": [
         {
@@ -8,7 +8,7 @@
         },
         {
             "name": "Omnipay Community",
-            "homepage": "https://github.com/omnipay/example/graphs/contributors"
+            "homepage": "https://github.com/thephpleague/omnipay-example/graphs/contributors"
         }
     ],
     "require": {
