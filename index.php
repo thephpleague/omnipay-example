@@ -16,6 +16,13 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 // enable Silex debugging
 $app['debug'] = true;
 
+// set the basurl for all templates
+$app->before(function () use ($app)
+{
+    // maybe a misnomer - getBaseUrl() seems to get a base *path*
+    $app["twig"]->addGlobal('baseurl', $app['request']->getBaseUrl());
+});
+
 // root route
 $app->get('/', function() use ($app) {
     $gateways = array_map(function($name) {
@@ -51,7 +58,7 @@ $app->post('/gateways/{name}', function($name) use ($app) {
     // redirect back to gateway settings page
     $app['session']->getFlashBag()->add('success', 'Gateway settings updated!');
 
-    return $app->redirect($app['request']->getPathInfo());
+    return $app->redirect($app['request']->getBaseUrl() . $app['request']->getPathInfo());
 });
 
 // create gateway authorize

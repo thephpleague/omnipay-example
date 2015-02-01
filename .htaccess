@@ -1,4 +1,5 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+# CHECKME: is index.php in reference to the current http path or to this htaccess file?
+RewriteRule . index.php [L]
