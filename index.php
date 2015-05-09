@@ -104,6 +104,21 @@ $app->post('/gateways/{name}/authorize', function($name) use ($app) {
     ));
 });
 
+// create gateway completeAuthorize
+$app->get('/gateways/{name}/completeAuthorize', function($name) use ($app) {
+    $gateway = Omnipay::create($name);
+    $sessionVar = 'omnipay.'.$gateway->getShortName();
+    $gateway->initialize((array) $app['session']->get($sessionVar));
+
+    $params = $app['session']->get($sessionVar.'.authorize');
+    $response = $gateway->completeAuthorize($params)->send();
+
+    return $app['twig']->render('response.twig', array(
+        'gateway' => $gateway,
+        'response' => $response,
+    ));
+});
+
 // create gateway capture
 $app->get('/gateways/{name}/capture', function($name) use ($app) {
     $gateway = Omnipay::create($name);
