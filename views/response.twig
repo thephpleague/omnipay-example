@@ -28,39 +28,39 @@
 
     <p>The response object had the following to say:</p>
 
-    <p><b>$request->isSuccessful()</b></p>
+    <p><b>$response->isSuccessful()</b></p>
     <pre>{{ response.isSuccessful() ? "true" : "false" }}</pre>
 
-    <p><b>$request->isRedirect()</b></p>
+    <p><b>$response->isRedirect()</b></p>
     <pre>{{ response.isRedirect() ? "true" : "false" }}</pre>
 
     {% if response.redirectUrl is defined %}
-        <p><b>$request->getRedirectUrl()</b></p>
+        <p><b>$response->getRedirectUrl()</b></p>
         <pre>{{ response.redirectUrl }}</pre>
     {% endif %}
 
     {% if response.redirectMethod is defined %}
-        <p><b>$request->getRedirectMethod()</b></p>
+        <p><b>$response->getRedirectMethod()</b></p>
         <pre>{{ response.redirectMethod }}</pre>
     {% endif %}
 
     {% if response.redirectData is defined %}
-        <p><b>$request->getRedirectData()</b></p>
+        <p><b>$response->getRedirectData()</b></p>
         <pre>{{ dump(response.redirectData) }}</pre>
     {% endif %}
 
-    <p><b>$request->getMessage()</b></p>
+    <p><b>$response->getMessage()</b></p>
     <pre>{{ response.message }}</pre>
 
-    <p><b>$request->getTransactionReference()</b></p>
+    <p><b>$response->getTransactionReference()</b></p>
     <pre>{{ response.transactionReference }}</pre>
 
     {% if response.cardReference is defined %}
-        <p><b>$request->getCardReference()</b></p>
+        <p><b>$response->getCardReference()</b></p>
         <pre>{{ dump(response.cardReference) }}</pre>
     {% endif %}
 
-    <p><b>$request->getData()</b></p>
+    <p><b>$response->getData()</b></p>
     <pre>{{ dump(response.data) }}</pre>
 
 {% endblock %}
