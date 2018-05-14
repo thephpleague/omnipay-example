@@ -6,18 +6,17 @@ It demonstrates using Omnipay to process payments using all supported payment ga
 ## Getting Started
 
 To run the example application, you must first install the development dependencies via composer.
-From the root `omnipay` directory, run:
-
-    $ curl -sS https://getcomposer.org/installer | php
-    $ php composer.phar update
-
-You can the use the built in web server (PHP 5.4+) to start the application:
-
-    $ php -S localhost:8000
-
-The application will now be available at [http://localhost:8000/](http://localhost:8000/)
+From the root `omnipay` directory, run `composer install`.
 
 ## Configuration
+
+A few gateways are added by default. You can require the gateways you want to test with Composer, eg:
+
+```
+composer require omnipay/paypal
+```
+
+Then add the gateway to the `gateways.php` configuration file.
 
 To test a gateway, you will need to have access to valid credentials. To obtain valid credentials,
 contact the payment gateway's support.

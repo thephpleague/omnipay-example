@@ -7,13 +7,21 @@
             "email": "adrian@adrianmacneil.com"
         },
         {
+            "name": "Barry vd. Heuvel",
+            "email": "barryvdh@gmail.com"
+        },
+        {
             "name": "Omnipay Community",
             "homepage": "https://github.com/thephpleague/omnipay-example/graphs/contributors"
         }
     ],
     "require": {
-        "omnipay/omnipay": "~2.0",
+        "omnipay/omnipay": "^3",
         "silex/silex": "~1.1",
-        "twig/twig": "~1.12"
+        "twig/twig": "~1.12",
+        "omnipay/dummy": "^3.0",
+        "omnipay/paypal": "^3.0",
+        "omnipay/stripe": "^3.0",
+        "omnipay/mollie": "^4.0"
     }
 }

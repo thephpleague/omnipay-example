@@ -27,7 +27,7 @@ $app->before(function () use ($app)
 $app->get('/', function() use ($app) {
     $gateways = array_map(function($name) {
         return Omnipay::create($name);
-    }, Omnipay::find());
+    }, require __DIR__ .'/gateways.php');
 
     return $app['twig']->render('index.twig', array(
         'gateways' => $gateways,

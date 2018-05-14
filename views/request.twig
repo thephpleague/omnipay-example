@@ -31,6 +31,14 @@ $response = $gateway->{{ method }}($params);</pre>
 
             <p>The following credit card parameters are available. Normally you will assign these
                 directly from POST data.</p>
+            {% if gateway.shortName == 'Dummy' %}
+            <p>Dummy CreditCard numbers:
+                <ul>
+                    <li>4929000000006 - Success</li>
+                    <li>4444333322221111 - Failure</li>
+                </ul>
+            </p>
+            {% endif %}
             <p><span class="label label-important">Important</span> Never store raw credit card details in your application! Instead, you should pass them straight to the gateway.</p>
 
             {% for key in ["firstName", "lastName", "number", "expiryMonth", "expiryYear", "startMonth", "startYear", "cvv",
