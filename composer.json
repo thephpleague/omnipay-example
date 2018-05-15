@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "omnipay/omnipay": "^3",
+        "league/omnipay": "^3",
         "silex/silex": "~1.1",
         "twig/twig": "~1.12",
         "omnipay/dummy": "^3.0",
